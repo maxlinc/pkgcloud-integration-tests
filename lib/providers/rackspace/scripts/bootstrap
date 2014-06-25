@@ -1,0 +1,7 @@
+#!/bin/bash
+npm install pkgcloud
+npm install winston
+npm install underscore
+npm install mustache
+
+node ./scripts/process_config.js

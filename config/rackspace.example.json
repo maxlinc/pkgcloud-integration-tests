@@ -1,7 +1,7 @@
 {
-  "my-user-name": {
-    "username": "my-user-name",
-    "apiKey": "my-api-key",
+  "{{RAX_USERNAME}}": {
+    "username": "{{RAX_USERNAME}}",
+    "apiKey": "{{RAX_API_KEY}}",
     "provider": "rackspace"
   }
 }
