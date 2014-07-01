@@ -1,3 +1,4 @@
 #!/bin/bash
 export PKGCLOUD_TESTS_DEFAULT_USERNAME=$RAX_USERNAME
+node ./scripts/process_config.js
 node "$@"
