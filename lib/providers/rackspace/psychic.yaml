@@ -1,0 +1,9 @@
+---
+options:
+  # parameter_mode: arguments
+samples:
+  upload directory: storage/syncFolder.js
+  get file: storage/downloadFile.js
+  secure load balancer: loadbalancers/addAccessList.js
+  throttle connections: loadbalancers/updateConnectionThrottle.js
+  setup ssl: loadbalancer/enableSSL.js
