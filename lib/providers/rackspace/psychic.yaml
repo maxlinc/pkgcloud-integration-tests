@@ -1,7 +1,7 @@
 ---
 options:
   # parameter_mode: arguments
-samples:
+scripts:
   upload directory: storage/syncFolder.js
   get file: storage/downloadFile.js
   secure load balancer: loadbalancers/addAccessList.js
