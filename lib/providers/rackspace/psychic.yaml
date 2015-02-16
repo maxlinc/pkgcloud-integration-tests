@@ -4,6 +4,6 @@ options:
 scripts:
   upload directory: storage/syncFolder.js
   get file: storage/downloadFile.js
-  secure load balancer: loadbalancers/addAccessList.js
-  throttle connections: loadbalancers/updateConnectionThrottle.js
+  secure load balancer: loadbalancer/addAccessList.js
+  throttle connections: loadbalancer/updateConnectionThrottle.js
   setup ssl: loadbalancer/enableSSL.js
