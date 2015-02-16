@@ -2,7 +2,7 @@
   "{{RAX_USERNAME}}": {
     "username": "{{RAX_USERNAME}}",
     "apiKey": "{{RAX_API_KEY}}",
-    "authUrl": "{{{OS_AUTH_URL}}}",
+    "authUrl": "{{{OS_AUTH_SERVER}}}",
     "region": "{{RAX_REGION}}",
     "provider": "rackspace"
   }

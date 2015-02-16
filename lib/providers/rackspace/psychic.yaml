@@ -2,6 +2,7 @@
 options:
   # parameter_mode: arguments
 scripts:
+  create network: compute/extensions/networksv2/createNetwork.js {{cidr}} {{network_label}} rackspace {{RAX_USERNAME}} {{RAX_REGION}}
   upload directory: storage/syncFolder.js
   get file: storage/downloadFile.js
   secure load balancer: loadbalancer/addAccessList.js
