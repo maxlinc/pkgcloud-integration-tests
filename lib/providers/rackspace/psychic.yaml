@@ -3,8 +3,19 @@ options:
   # parameter_mode: arguments
 scripts:
   create network: compute/extensions/networksv2/createNetwork.js {{cidr}} {{network_label}} rackspace {{RAX_USERNAME}} {{RAX_REGION}}
-  upload directory: storage/syncFolder.js
-  get file: storage/downloadFile.js
-  secure load balancer: loadbalancer/addAccessList.js
-  throttle connections: loadbalancer/updateConnectionThrottle.js
-  setup ssl: loadbalancer/enableSSL.js
+  create server: compute/createServer.js {{server_name}} {{server_flavor}} {{server_image}} rackspace {{RAX_USERNAME}} {{RAX_REGION}}
+  delete server: compute/deleteServer.js {{server_name}} rackspace {{RAX_USERNAME}} {{RAX_REGION}}
+  delete  network: compute/extensions/networksv2/deleteNetwork.js {{network_label}} rackspace {{RAX_USERNAME}} {{RAX_REGION}}
+  attach volume: compute/attachVolume.js {{server_name}} {{volume_name}} rackspace {{RAX_USERNAME}} {{RAX_REGION}}
+  detach volume: compute/extensions/volume-attachments/detachVolume.js {{server_name}} {{volume_name}} rackspace {{RAX_USERNAME}} {{RAX_REGION}}
+  create container: storage/createContainer.js {{container_name}} rackspace {{RAX_USERNAME}} {{RAX_REGION}}
+  upload file: storage/uploadFile.js {{container_name}} {{remote_file}} {{local_file}} rackspace {{RAX_USERNAME}} {{RAX_REGION}}
+  # This appears to be hardcoded...
+  upload directory: storage/syncFolder.js rackspace {{RAX_USERNAME}} {{RAX_REGION}}
+  get file: storage/downloadFile.js {{container_name}} {{remote_file}} rackspace {{RAX_USERNAME}} {{RAX_REGION}}
+  delete container: storage/deleteContainer.js {{container_name}} rackspace {{RAX_USERNAME}} {{RAX_REGION}}
+  create load balancer: loadbalancer/createLoadBalancer.js {{loadbalancer_name}} rackspace {{RAX_USERNAME}} {{RAX_REGION}}
+  secure load balancer: loadbalancer/addAccessList.js {{loadbalancer_name}} {{access_list_json}} rackspace {{RAX_USERNAME}} {{RAX_REGION}}
+  throttle connections: loadbalancer/updateConnectionThrottle.js {{loadbalancer_name}} rackspace {{RAX_USERNAME}} {{RAX_REGION}}
+  setup ssl: loadbalancer/enableSSL.js {{loadbalancer_name}} {{keyfile}} {{certificate_file}} {{intermediate_file}} rackspace {{RAX_USERNAME}} {{RAX_REGION}}
+  delete load balancer: loadbalancer/deleteLoadBalancer.js {{loadbalancer_name}} rackspace {{RAX_USERNAME}} {{RAX_REGION}}
